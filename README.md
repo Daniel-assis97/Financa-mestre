@@ -1,4 +1,4 @@
-# 💵 Finance Master
+# 💵 Finança Mestre
 
 Dashboard financeiro interativo para controle de entradas e saídas mensais. Este projeto foi desenvolvido para facilitar a organização financeira pessoal com uma interface moderna, responsiva e persistência de dados local.
 
