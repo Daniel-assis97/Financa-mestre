@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Master</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💵</text></svg>">
+</head>
+<body>
+    <main class="container">
+        <header class="cabeca">
+            <h1 class="titulo">Finance Master</h1>
+            <p class="subInfo">Dashboard interativo que controla suas entradas e saídas mensais</p>
+        </header>
+    <div class="info">
+        <div class="resultados">
+            <div class="resultadoEntrada">
+                <p>Entradas: R$ <br>
+                <span class="resEntrada">0,00</span></p>
+            </div>
+
+            <div class="resultadoSaida">
+                <p>Saídas: R$ <br>
+                <span class="resSaida">0,00</span></p>
+            </div>
+
+            <div class="resultadoTotal">
+                <p>Subtotal: R$ <br>
+                <span class="resSubtotal">0,00</span></p>
+            </div>
+
+        </div><br>
+        <div class="inputInfo">
+            <div class="description">
+                <Label>Descrição:</label>
+                <input type="text" class="descricao" autocomplete="off">
+            </div>
+
+            <div class="valor-info">
+                <label>Valor: R$</label>
+                <input type="text" class="valor" autocomplete="off">
+            </div>
+
+            <div class="selecao">
+                <label>Tipo(entrada ou saída): </Label>
+                <select class="options">
+                    <option class="entradainfo" value="Entrada">Entrada</options>
+                    <option class="saidainfo" value="Saida">Saída</options>
+                </select>
+            </div>
+            <div class="botao">
+                <input type="submit" id="enviar" value="Enviar">
+            </div>
+        </div><br>  
+    <div class="container-info">
+        <table>
+            <thead class="infoss">
+                <tr>
+                    <th class="descriccao" >Descrição</th>
+                    <th class="entradasInfos">Entradas</th>
+                    <th class="saidaInfos">Saídas</th>
+                </tr> 
+            </thead>
+            <tbody id="lista"> 
+                 
+            </tbody>  
+        </table>
+    </div>
+    </div> 
+    </main>
+<script src="script.js" ></script>
+</body>
+</html>

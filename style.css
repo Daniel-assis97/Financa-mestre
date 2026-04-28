@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to right, rgb(234, 234, 238), rgb(211, 211, 213));
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 50px; 
+    padding-top: 50px;
+}
+
+@keyframes effect {
+    from {
+        opacity: 0;
+        transform: translateY(15px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.titulo{
+    font-size: 2.5rem;
+    text-align: center;
+    opacity: 0;
+    animation: effect 0.7s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.subInfo{
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: effect 0.7s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.resultados{
+    display: flex;
+    gap: 120px;
+    opacity: 0;
+     animation: effect 0.7s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.resultadoEntrada, .resultadoSaida, .resultadoTotal{
+    transition: 0.2s;
+}
+.resultadoEntrada:hover, .resultadoSaida:hover, .resultadoTotal:hover{
+    transform: scale(1.2);
+}
+
+.info p{
+    padding: 10px 30px 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(102, 102, 102);
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+    font-size: 17px;
+}
+.inputInfo{
+    font-size: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+    opacity: 0;
+    animation: effect 0.7s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+.description, .valor-info, .selecao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0px; 
+}
+
+.inputInfo input{
+    border-radius: 5px;
+    height: 22px;
+    width: 140px;
+    transition: 0.2s;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+.inputInfo input:hover{
+    transform: scale(1.12);
+}
+
+.inputInfo select{
+    border-radius: 2px;
+    height: 25px;
+    width: 160px;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.inputInfo select:hover{
+    transform: scale(1.12);
+
+}
+
+#enviar{
+    justify-content: flex-end;
+    display: flex;
+    border-color: darkgrey;
+    margin-left: -20px;
+    background-color: rgb(10, 122, 159);
+    color: antiquewhite;
+    font-size: 20px;
+    height: 30px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#enviar:hover{
+    transform: scale(0.95);
+    background-color: rgb(30, 76, 92);
+    cursor: pointer;
+}
+.container-info{
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: effect 0.7s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.saidaInfos, .entradasInfos,  .descriccao{
+    border-bottom: 1px solid rgba(40, 40, 40, 0.249);
+}
+
+tr{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+td, th{     
+    padding: 5px 40px;
+    text-align: center;
+}
+
+.deleteItem{
+    background-color: rgb(196, 196, 213);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.15s;
+    box-shadow: 0px 0px 2px gray;
+}
+
+.deleteItem:hover{
+    background-color: rgb(30, 76, 92);
+}
+
+.negativo{ 
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+        padding: 0 15px;
+    }
+
+    .resultados {
+        gap: 30px; 
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .inputInfo {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+
+    .inputInfo input, 
+    .inputInfo select, 
+    #enviar {
+        width: 100%; 
+        max-width: 300px;
+    }
+
+    #enviar {
+        margin-left: 0; 
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-left: 8px;
+        padding-right: 8px;
+        box-sizing: border-box;
+    }
+
+    
+    .info p {
+        font-size: 13px;
+        padding: 8px 12px;
+        max-width: 260px;
+    }
+
+    .resultados {
+        gap: 20px;
+        align-items: center;
+    }
+
+    .container-info {
+        width: 100%;
+        margin-top: 15px;
+        display: block;
+        overflow-x: hidden; 
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; 
+    }
+
+    
+    th {
+        font-size: 12px;
+        padding: 8px 2px;
+    }
+
+    
+    tbody tr td {
+        font-size: 11px; 
+        padding: 10px 2px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    
+    th:nth-child(1), td:nth-child(1) { width: 30%; } 
+    th:nth-child(2), td:nth-child(2) { width: 30%; } 
+    th:nth-child(3), td:nth-child(3) { width: 25%; } 
+    th:nth-child(4), td:nth-child(4) { width: 15%; }
+
+    .coluna-tipo {
+    font-size: 16px; 
+    text-align: center;
+    }
+
+    .saidaInfos, .entradasInfos, .descriccao {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .inputInfo {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .inputInfo input, .inputInfo select, #enviar {
+        width: 100%;
+        max-width: 220px;
+        font-size: 13px;
+        height: 32px;
+    }
+
+    #enviar {
+        margin-left: 0;
+    }
+}
